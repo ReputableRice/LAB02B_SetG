@@ -6,3 +6,468 @@ h3{
   color: red;
 }
 
+/* ==========================================================================
+    [Table of contents]
+
+    1. BASE
+        1.1 Page Rendering Defaults
+        1.2 User Experience Adjustments
+        1.3 Core Styling
+    2. LAYOUT
+        2.1 Core Layout
+        2.2 medium screens and up
+            2.2.1 article
+        2.3 large screens and up
+            2.3.1 article
+        2.4 Core Article
+    3. MODULES
+    4. STATES
+    5. UTILITIES
+    6. PRINT
+    7. MISC
+
+    ========================================================================== */
+/* ==========================================================================
+    1. BASE
+    ========================================================================== */
+/* 1.1 Page Rendering Defaults */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.5;
+    background: rgb(216, 216, 216);
+}
+
+/* 1.2 User Experience Adjustments */
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    /* A better looking default horizontal rule */
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    /* https://github.com/h5bp/html5-boilerplate/issues/440 */
+    vertical-align: middle;
+}
+
+fieldset {
+    /* Remove default fieldset styles. */
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    /* Allow only vertical resizing of textareas. */
+    resize: vertical;
+}
+
+/* 1.3 Core Styling */
+.heading,
+p {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    line-height: 1.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.heading {
+    color: rgb(43, 159, 215);
+    text-transform: capitalize;
+}
+
+img {
+    width: 100%;
+    border: 1px solid rgb(150, 150, 150);
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style-position: inside;
+}
+
+/* ==========================================================================
+   2. LAYOUT
+   ========================================================================== */
+/* 2.1 Core Layout */
+.page {
+    margin: 0 auto; /* center page */
+    padding: 2rem;  /* page padding */
+    background: rgb(255, 255, 255);
+}
+
+.page__header {
+    grid-area: hd;
+}
+
+.featured {
+    grid-area: fr;
+}
+
+.page__main {
+    grid-area: mn;
+}
+
+.page__sidebar {
+    grid-area: sd;
+}
+
+.page__footer {
+    grid-area: ft;
+}
+
+.logo__img {
+    width: 100%;
+    height: 5rem;
+}
+
+/* 2.2 medium screens and up */
+@media screen and (min-width: 40em) {
+    html {
+        margin: 0 2rem;
+    }
+
+    .page,
+    .page__header,
+    .featured,
+    .page__footer {
+        display: grid;
+    }
+
+    .page {
+        min-width: 40rem;
+        max-width: 60rem;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 0;
+        grid-template-columns: repeat(6, 1fr);
+
+        /* grid-auto-rows: minmax(10rem, auto); temp container heights */
+        grid-template-areas: "hd hd hd hd hd hd"
+            "fr fr fr fr fr fr"
+            "mn mn mn sd sd sd"
+            "ft ft ft ft ft ft";
+    }
+
+    .page__header,
+    .featured {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    .page__section__heading {
+        text-align: center;
+        grid-column: span 3;
+    }
+
+    .page__footer {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    /* 2.2.1 article */
+    .article__figure {
+        margin: 0;
+    }
+}
+
+/* 2.3 large screens and up */
+@media screen and (min-width: 64em) {
+    .page {
+        min-width: 60rem;
+        max-width: 84rem;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: "hd hd hd hd hd hd hd hd hd hd hd hd"
+            "fr fr fr fr fr fr fr fr fr fr fr fr"
+            "mn mn mn mn mn mn mn mn sd sd sd sd"
+            "ft ft ft ft ft ft ft ft ft ft ft ft";
+    }
+
+    .page__footer {
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+    }
+
+    .page__section__heading {
+        font-size: 3rem;
+    }
+
+    .featured {
+        grid-gap: 1.5rem;
+    }
+
+    /* 2.3.1 article */
+    .article__figure {
+        width: 50%;
+        float: left;
+        margin: 0 1rem 0 0;
+    }
+
+    .article__excerpt {
+        column-count: 2;
+        column-rule: 1px solid #ccc;
+        column-gap: 2rem;
+        text-align: justify;
+    }
+}
+
+/* 2.4 Core Article */
+.article__figures {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0;
+}
+
+.article__img--big {
+    grid-column: span 4;
+    margin: 0;
+}
+
+.article__img--small {
+    margin: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    padding: 0.5rem;
+    background: #ebe6e6;
+}
+
+figcaption p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   3. MODULES
+   ========================================================================== */
+/* 3.1 Widgets */
+.widget>* {
+    padding: 0;
+    margin: 0;
+}
+
+.widget {
+    padding: 1.5rem 0 1rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.widget ul {
+    list-style: none;
+}
+
+.widget__list__item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.widget__item__content {
+    order: 2;
+    grid-column: span 3;
+    padding-right: 0;
+}
+
+.thumbnail--small {
+    order: 1;
+    grid-column: span 1;
+    margin: 1.5rem 0.5rem 0 0;
+}
+
+/* ==========================================================================
+   4. STATES
+   ========================================================================== */
+/*
+
+
+
+/* ==========================================================================
+   5. UTILITIES
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ * http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   6. PRINT
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+
+        /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " ("attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " ("attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* ==========================================================================
+   6. MISC
+   ========================================================================== */
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
