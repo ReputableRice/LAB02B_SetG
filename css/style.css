@@ -31,10 +31,10 @@ body {
   
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 
-  width: 80vw;
+  width: 61.5625rem;
   height: 5.9rem;
 
   margin: 0.1%;
@@ -43,8 +43,13 @@ body {
 .header__logo {
   border: 1px solid purple; /*Remove*/
 
+  width: 13.75rem;
+  height: 4.8125rem;
 }
 
 .header__menu {
   border: 1px solid purple; /*Remove*/
+
+  width: 44.75rem;
+  height: 4.8125rem;
 }
