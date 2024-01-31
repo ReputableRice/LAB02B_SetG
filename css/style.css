@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  border: 1px solid red; /*Remove*/
+  border: 1px solid green; /*Remove*/
   margin: 0;
   width: 100vw;
 
@@ -23,7 +23,6 @@ body {
   align-items: center;
   
   width: 100vw;
-  height: 6.75rem;
 }
 
 .header__inner__container{
@@ -37,7 +36,7 @@ body {
   width: 61.5625rem;
   height: 5.9rem;
 
-  margin: 0.1%;
+  margin: 0.4rem;
 }
 
 .header__logo {
@@ -52,4 +51,136 @@ body {
 
   width: 44.75rem;
   height: 4.8125rem;
+}
+
+/*CAROUSEL*/
+.carousel__image {
+  border: 1px solid red; /*Remove*/
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100vw;
+}
+
+.carousel__inner__container {
+  border: 1px solid blue; /*Remove*/
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 77.5rem;
+  height: 30.375rem;
+
+  margin: 0.4rem;
+}
+
+/* TITLE */
+.title {
+  border: 1px solid red; /*Remove*/
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100vw;
+}
+
+.title__inner__container {
+  border: 1px solid blue; /*Remove*/
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  
+  width: 61.5625rem;
+  height: 10.3125rem;
+
+  margin: 0.8rem;
+}
+
+.title__item {
+  border: 1px solid yellow; /*Remove*/
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  text-align:center;
+  width: 60.0625rem;
+  height: 8.9375rem;
+
+  margin: 0.8rem auto;
+}
+
+span {
+}
+
+/*EXPLANATION*/
+
+.explanation {
+  border: 1px solid red; /*Remove*/
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100vw;
+}
+
+.explanation__inner__container {
+  border: 1px solid blue; /*Remove*/
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  
+  width: 61.5625rem;
+  height: 22.0625rem;
+
+  margin: 0.8rem;
+}
+
+.explanation__grid {
+  border: 1px solid yellow; /*Remove*/
+
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+
+  width: 61.5625rem;
+  height: 21.4375rem;
+
+  margin: 0.4rem;
+
+  text-align:center
+}
+
+.explanation__title {
+  background-color:red;
+
+  grid-row: 1;
+  grid-column: span 4;
+
+  width: auto;
+  height: 3.5rem;
+}
+
+.explanation__title__header {
+  margin: 0;
+}
+
+.explanation__item {
+  border: 1px solid yellow; /*Remove*/
+
+  width: 14.5;
+  height: 16.3125rem;
+
+  margin: 0.3rem;
 }
