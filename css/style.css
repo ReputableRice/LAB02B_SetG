@@ -1,3 +1,7 @@
+:root{
+
+}
+
 html {
   font-size: 16px;
 }
@@ -47,4 +51,136 @@ body {
 
 .header__menu {
   border: 1px solid purple; /*Remove*/
+}
+
+
+
+
+/* Footer */
+
+/* Footer margins etc */
+.footer{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+
+  padding: 2rem;
+
+  background-color:darkturquoise;
+}
+
+.footer__inner__container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  width: 80vw;
+  margin: 0.1%;
+
+  padding: 2rem;
+  background-color:lightcyan;
+
+}
+
+/* Footer general */
+.footer__h3{
+  font-size: var();
+  margin-left: 1rem;
+}
+
+/* Footer main stuff */
+.footer__top{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__profile{
+  width:5rem;
+  margin-right: 1rem;
+}
+
+.footer__desc{
+  display: flexs;
+}
+
+.footer__author{
+  padding-left: 1rem;
+}
+
+.footer__paragraph{
+  font-style: italic;
+}
+
+.footer__top__floor__line{
+  display: flex;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid navy;
+}
+
+
+/* Footer components */
+.footer__comps{
+  display: flex;
+  margin-top: 5rem;
+}
+.footer__item{
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: column;  */
+  margin: 1rem;
+  width: 25%;
+  height: 30rem;
+  border: 1px solid red;
+}
+.footer__line{
+  border-bottom: 1px solid black ; /**temp until adding the line with triangle*/
+  margin: 0 0.5rem;
+}
+.footer__text{
+  margin: 3rem 1rem 1rem;
+
+}
+.footer__socials{
+  margin-left: 0.5rem;
+}
+
+/* Footer About us */
+.footer__icon{
+  padding-top: 1rem;
+  width:3rem;
+
+}
+
+/* Footer flicker */
+
+.footer__album{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+
+  height: 100%;
+}
+.footer__images{
+  width: 6rem;
+  height: 6rem;
+
+  padding: 0.08rem;
+}
+
+/* Footer Tweets */
+
+.footer__fans{
+  display: flex;
+  margin: 3rem 1rem 1rem;
+}
+.footer__fans__orgin{
+  width: 5rem;
+  height: 5rem;
+  padding-right: 1rem;
+
+}
+.footer__fans__opinions{
 }
