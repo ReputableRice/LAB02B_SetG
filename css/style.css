@@ -78,6 +78,16 @@ body {
   margin: 0.4rem;
 }
 
+.carousel__banner {
+  width: 77.5rem;
+  height: 30.375rem;
+}
+
+.carousel__list__text {
+  z-index: 5;
+  position: absolute;
+}
+
 /* TITLE */
 .title {
   border: 1px solid red; /*Remove*/
@@ -163,8 +173,6 @@ span {
 }
 
 .explanation__title {
-  background-color:red;
-
   grid-row: 1;
   grid-column: span 4;
 
@@ -179,7 +187,7 @@ span {
 .explanation__item {
   border: 1px solid yellow; /*Remove*/
 
-  width: 14.5;
+  width: 14.5rem;
   height: 16.3125rem;
 
   margin: 0.3rem;
