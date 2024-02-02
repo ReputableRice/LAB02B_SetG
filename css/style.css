@@ -1,13 +1,12 @@
-:root{
-
-}
-
 html {
+  max-width: 100vw;
   font-size: 16px;
+
+  margin: auto;
 }
 
 body {
-  max-width: 100vw;
+
 
   display: flex;
   flex-direction: column;
@@ -278,12 +277,11 @@ body {
   .title__two {
     max-width: 29rem;
   }
-}
+
 
 /* Large only */
 @media screen and (min-width: 64em) and (max-width: 74.9375em) {}
 
-}
 
 /* project */
 
