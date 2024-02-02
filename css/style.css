@@ -293,9 +293,9 @@ body {
   justify-content: center;
   align-items: center;
 }
-.project__album{
+/* .project__album{
   margin: 1rem;
-}
+} */
 .project__item{
   background-image: url('/img/placeholder.svg');
   width: 27rem;
@@ -512,6 +512,13 @@ body {
   .m-1-2 {
       grid-template-columns: 1fr 2fr;
   }
+  .project__album{
+    justify-content: center;
+    align-items: center;
+  }
+  /* .project__item{
+    width: 24rem;
+  } */
   .interactive__item{
     width: 40rem;
     height: 22rem;
