@@ -337,6 +337,8 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  align-items: flex-end; 
+  /* this might mess things */
 
   width: 61vw;
   margin: 0.1%;
@@ -390,7 +392,6 @@ body {
 }
 .footer__text{
   margin: 3rem 1rem 1rem;
-
 }
 .footer__socials{
   margin-left: 0.5rem;
@@ -406,13 +407,13 @@ body {
   justify-content: space-evenly;
   align-content: center;
 
+  margin-top: 3rem;
   height: 100%;
 }
 .footer__images{
   width: 6rem;
   height: 6rem;
-
-  padding: 0.08rem;
+  padding: 0.5rem;
 }
 .footer__fans{
   display: flex;
@@ -420,6 +421,30 @@ body {
 }
 .footer__blue{
   color:rgb(22 , 166, 221);
+}
+.footer__email{
+  display: flex;
+  align-items: center;
+  justify-content: space-between ;
+  margin-top: 1rem;
+  height: 3rem;
+  background-color: rgb(222,98,98);
+}
+.footer__email__input{
+  margin-left: 1rem;
+  font-size: 0.8rem;
+}
+.footer__email__icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(255, 185, 1);
+}
+.footer__colors_container{
+  width: 100vw;
 }
 .footer__colors{
   width:auto;
@@ -629,10 +654,11 @@ body {
     width: 80vw;
   }
   .footer__fans__orgin{
-    width: 2rem;
-    height: 2rem;
-    padding-right: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    padding-right: 2rem;
   }
+
 }
 @media screen and (min-width: 64em) {
   .grid {
@@ -657,7 +683,11 @@ body {
     width:15rem;
     height: 10rem;
   }
-  .footer__fans__orgin{
+  .footer__icon{
+    width:2.5rem;
+
+  }
+ .footer__fans__orgin{
     width: 3rem;
     height: 3rem;
     padding-right: 1rem;
@@ -669,6 +699,7 @@ body {
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto;
   }
+
   .article__album{
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto;
