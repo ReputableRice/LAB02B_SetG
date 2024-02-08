@@ -1,3 +1,10 @@
+:root{
+  --bg-footer: rgb(22,36,47);
+  --footer-white: rgb(255,255,255);
+
+  --main-font: 'Ubuntu', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 html {
   max-width: 100vw;
   font-size: 16px;
@@ -317,8 +324,10 @@ body {
 .footer{
   display: flex;
   justify-content: center;
-  padding: 1rem;
-  background-color: cornflowerblue;
+  padding: 1rem 1rem 0;
+  background-color: var(--bg-footer);
+  color: var(--footer-white);
+  font-family: var(--main-font);
   margin: 0;
   width: 100vw;
 }
@@ -364,7 +373,7 @@ body {
 .footer__top__floor__line{
   display: flex;
   padding-bottom: 3rem;
-  border-bottom: 2px solid navy;
+  border-bottom: 2px solid rgb(22, 141, 183);
 }
 .footer__comps{
   display: flex;
@@ -373,10 +382,10 @@ body {
 .footer__item{
   display: flex;
   flex-direction: column;
-  margin: 1rem 1rem 2rem;
+  margin: 0rem 1rem 1rem;
 }
 .footer__line{
-  border-bottom: 1px solid black ; /**temp until adding the line with triangle*/
+  border-bottom: 1px solid var(--footer-white) ; /**temp until adding the line with triangle*/
   margin: 0 0.5rem;
 }
 .footer__text{
@@ -388,7 +397,7 @@ body {
 }
 .footer__icon{
   padding-top: 1rem;
-  width:3rem;
+  width:3.3rem;
 }
 .footer__album{
   display: flex;
@@ -409,6 +418,32 @@ body {
   display: flex;
   margin: 3rem 1rem 1rem;
 }
+.footer__blue{
+  color:rgb(22 , 166, 221);
+}
+.footer__colors{
+  width:auto;
+  height: 2rem;
+  display: flex;
+  margin-bottom: 0;
+}
+.footer__colors__item{
+  width: 3.6rem;
+  background-color: rgb(37, 197, 37);
+}
+.footer__colors__item:nth-of-type(2){
+  background-color: rgb(255, 185, 1);
+}
+.footer__colors__item:nth-of-type(3){
+  background-color: rgb(222, 98, 98);
+}
+.footer__colors__item:nth-of-type(4){
+  background-color: rgb(22, 145, 189);
+}
+.footer__colors__item:nth-of-type(5){
+  background-color: rgb(22, 107, 162);
+}
+
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
@@ -476,9 +511,32 @@ body {
     row-gap: 0.5rem;
     justify-content: center;
   }
+  .footer__inner__container{
+    width: 18rem;
+  }
+  .footer__top{
+    width: 18rem;
+  }
   .footer__item{
     justify-content: center;
     height: 100%;
+    width: 18rem;
+  }
+  .footer__profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:8rem;
+    height: 8rem;
+  }
+  .footer__paragraph{
+    font-size: 0.8rem;
+  }
+  .footer__desc{
+    display: flex;
+  }
+  .footer__comps{
+    margin-top: 0;
   }
   .sponsor__image{
     width: 7rem;
@@ -493,6 +551,9 @@ body {
     width: 2rem;
     height: 2rem;
     padding-right: 0.5rem;
+  }
+  .footer__fans__opinions{
+    font-size: 0.7em;
   }
 }
 
