@@ -292,12 +292,17 @@ body {
 
 /* Interactive */
 .interactive{
+  width: 100vw;
   margin: 1rem 0 1rem;
 }
 .interactive__title{
   display: grid;
   justify-content: center;
   justify-items: center;
+  font-family: var(--main-font);
+}
+.innteractive__inner__container{
+  width: 61rem;
 }
 .interactive__box{
   display: flex;
@@ -305,7 +310,7 @@ body {
   flex-direction: column;
 }
 .interactive__item{
-  width: 19rem;
+  width: 47rem;
   padding: 1rem;
 }
 
@@ -317,7 +322,11 @@ body {
   width: 100vw;
 }
 .sponser__inner__container{
-  width: 80vw;
+  width: 61vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0 3rem;
+
 }
 
 /* Footer */
@@ -331,47 +340,39 @@ body {
   margin: 0;
   width: 100vw;
 }
-
 .footer__inner__container{
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  align-items: flex-end; 
-  /* this might mess things */
+  align-items: center; 
 
   width: 61vw;
   margin: 0.1%;
 }
 .footer__h3{
-  font-size: var();
   margin-left: 1rem;
 }
 .footer__top{
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 0 0 2rem;
 }
-
 .footer__profile{
   width:5rem;
   height: 5rem;
   margin-right: 1rem;
 }
-
 .footer__desc{
   display: flex;
   flex-direction: column;
 }
-
 .footer__author{
   padding-left: 1rem;
 }
-
 .footer__paragraph{
   font-style: italic;
 }
-
 .footer__top__floor__line{
   display: flex;
   padding-bottom: 3rem;
@@ -379,7 +380,7 @@ body {
 }
 .footer__comps{
   display: flex;
-  margin-top: 3rem;
+  margin: 3rem 0.5rem 3rem;
 }
 .footer__item{
   display: flex;
@@ -388,7 +389,7 @@ body {
 }
 .footer__line{
   border-bottom: 1px solid var(--footer-white) ; /**temp until adding the line with triangle*/
-  margin: 0 0.5rem;
+  /* margin: 0 0.5rem; */
 }
 .footer__text{
   margin: 3rem 1rem 1rem;
@@ -409,11 +410,13 @@ body {
 
   margin-top: 3rem;
   height: 100%;
+  row-gap: 0.5rem;
 }
 .footer__images{
   width: 6rem;
   height: 6rem;
-  padding: 0.5rem;
+  padding: 0.05rem ;
+  row-gap: 0.5rem;
 }
 .footer__fans{
   display: flex;
@@ -546,6 +549,7 @@ body {
     justify-content: center;
     height: 100%;
     width: 18rem;
+    margin: 0;
   }
   .footer__profile{
     display: flex;
@@ -561,10 +565,10 @@ body {
     display: flex;
   }
   .footer__comps{
-    margin-top: 0;
+    margin:0 0.5rem 0
   }
   .sponsor__image{
-    width: 7rem;
+    width: 5rem;
     height: 2rem
   }
   .footer__inner__container{
@@ -628,7 +632,7 @@ body {
   .grid {
     display: grid;
 
-    column-gap: 0.2rem;
+    column-gap: 0.8rem;
     row-gap: 0.5rem;
     width: 80vw;
     justify-content: center;
@@ -637,26 +641,51 @@ body {
       grid-template-columns: 1fr 1fr;
       width: 100%;
   }
-  .m-col-5 {
-      grid-template-columns: repeat(5, 1fr);
+  .interactive__box{
+    align-items: center;
   }
   .interactive__item{
-    width: 40rem;
-    height: 22rem;
+    width: 37.5rem;
+    height: 18rem;
+  }
+  .sponser__inner__container{
+    width: 37.5rem;
   }
   .sponsor__image{
-    width: 8rem;
-    height: 5rem;
+    width: 6rem;
+    height: 4rem;
+    margin: 0 1rem;
+  }
+  .footer__top{
+    padding: 0;
+  }
+  .footer__h3{
+    margin-left: 0;
+  }
+  .footer__item{
+    margin: 0;
   }
   .footer__inner__container{
     display: flex;
     justify-content: center;
-    width: 80vw;
+    width: 37.5rem;
+  }
+  .footer__images{
+    padding: 0.05rem;
+  }
+  .footer__text{
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    line-height: 1.4rem;
   }
   .footer__fans__orgin{
     width: 3rem;
     height: 3rem;
-    padding-right: 2rem;
+    padding-right: 1rem;
+  }
+  .footer__fans__opinions{
+    font-size: 0.8em;
+    line-height: 1.4rem;
   }
 
 }
@@ -680,12 +709,11 @@ body {
     flex-direction: row;
   }
   .sponsor__image{
-    width:15rem;
-    height: 10rem;
+    width:12rem;
+    height: 9rem;
   }
   .footer__icon{
     width:2.5rem;
-
   }
  .footer__fans__orgin{
     width: 3rem;
