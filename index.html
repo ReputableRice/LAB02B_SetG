@@ -1,17 +1,5 @@
 <!doctype html>
 <html class="no-js page" lang="en">
-<!--
-  To Do/Reminder:
-  - Add 3 layer containers so that the main/content container/content can be editable
-  - Add Lists to the banner
-  - Change the casing to bem
-  - remove Container from the nesting elements and apply "item" to content classes
-  - h1 to Title, h2 to "Things we do", h4 to tagline, h3 to footer headings
-  - Use more semantic tags like <article>
-  - use for classes
-  - use SVG's
-  - Inner container should be the only one with max-width
--->
 
 <head>
   <meta charset="utf-8">
@@ -36,14 +24,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"
+    integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
 </head>
 
 <body class="page__margin">
 
   <header class="page__header">
     <div class="header__inner__container">
-      <img src="img/placeholder.svg" class="header__logo">
+      <img src="img/Logo.jpg" class="header__logo">
       <img src="img/placeholder.svg" class="header__menu"></img>
       <img src="img/placeholder.svg" class="burger__menu"></img>
     </div>
@@ -51,16 +40,15 @@
 
   <div class="carousel__image">
     <div class="carousel__inner__container">
-      <img src="img/placeholder.svg" class="carousel__button button__left"></img>
+      <img src="img/placeholder.svg" class="carousel__button button__left">
       <dl class="carousel__list__group">
-        <h1 class="carousel__list__text list__blue">Metro Style</h1>
-        <h1 class="carousel__list__text list__red">Retina Ready</h1>
-        <h1 class="carousel__list__text list__yellow">Responsive Design</h1>
+        <li class="carousel__list__text list__blue">Metro Style</li>
+        <li class="carousel__list__text list__red">Retina Ready</li>
+        <li class="carousel__list__text list__yellow">Responsive Design</li>
       </dl>
       <img src="img/placeholder.svg" class="carousel__button button__right"></img>
-      <dl class="carousel__list">
-
-      </dl>
+      <div class="carousel__list">
+      </div>
     </div>
   </div>
 
@@ -77,7 +65,7 @@
     <div class="explanation__inner__container">
       <div class="explanation__title">
         <h1 class="explanation__title__header">Things That We Do</h1>
-        <span>Ask us what we can do for you</span>
+        <span class="explanation__subhead">Ask us what we can do for you</span>
       </div>
       <div class="explanation__grid">
         <img src="img/placeholder.svg" class="explanation__item">
@@ -218,7 +206,7 @@
             </div>
           </div>
         </div>
-    </div>
+      </div>
     </div>
   </div>
 
@@ -230,7 +218,8 @@
       </div>
       <div class="interactive__box">
         <img class="interactive__item" src="img/int_accord.png"></img>
-        <img class="interactive__item" src="img/int_tabs.png"></img></div>
+        <img class="interactive__item" src="img/int_tabs.png"></img>
+      </div>
     </div>
   </div>
 
@@ -251,7 +240,10 @@
           <img class="footer__profile" src="img/peewee.png">
           <div class="footer__desc">
             <h4 class="footer__author">Peewee Herman</h4>
-            <div class="footer__paragraph">Peewee has over 10 years experience in the industry. He is our Creative Director, digital designer, web designer and front-end developer. He is also pretty good with a sketchbook. Before starting the company Peewee worked as a designer and studio manager for a design house who boasted a number of big name clients.</div> <!--uses Ubuntu type text size 7pt(desktop) Italic-->
+            <div class="footer__paragraph">Peewee has over 10 years experience in the industry. He is our Creative
+              Director, digital designer, web designer and front-end developer. He is also pretty good with a
+              sketchbook. Before starting the company Peewee worked as a designer and studio manager for a design house
+              who boasted a number of big name clients.</div> <!--uses Ubuntu type text size 7pt(desktop) Italic-->
           </div>
         </div>
       </div>
@@ -261,10 +253,12 @@
           <div class="s-hide">
             <h3 class="footer__h3">About Us</h3>
             <div class="footer__line footer__line__color"></div>
-            <div class="footer__text">Minions ipsum potatoooo potatoooo uuuhhh. Chasy poulet tikka masala jiji wiiiii hahaha po kass tulaliloo potatoooo. Bee do bee do bee do chasy ti aamoo! Po kass daa bee do bee do bee do po kass wiiiii butt chasy. </div>
+            <div class="footer__text">Minions ipsum potatoooo potatoooo uuuhhh. Chasy poulet tikka masala jiji wiiiii
+              hahaha po kass tulaliloo potatoooo. Bee do bee do bee do chasy ti aamoo! Po kass daa bee do bee do bee do
+              po kass wiiiii butt chasy. </div>
           </div>
           <div class="footer__socials ">
-            <img class="footer__icon" src="img/facebook.png"></img> 
+            <img class="footer__icon" src="img/facebook.png"></img>
             <img class="footer__icon" src="img/Google_Plus.png"></img>
             <img class="footer__icon" src="img/Twit.png"></img>
             <img class="footer__icon" src="img/insta.png"></img>
@@ -288,26 +282,30 @@
           <div class="footer__line footer__line__color"></div>
           <div class="footer__fans">
             <img class="footer__fans__orgin" src="img/tweet.png">
-            <div class="footer__fans__opinions"><span class="footer__blue">@Minions</span> - ipsum potatoooo potatoooo uuuhhh. Chasy poulet tikka masala jiji wiiiii hahaha.</div>
+            <div class="footer__fans__opinions"><span class="footer__blue">@Minions</span> - ipsum potatoooo potatoooo
+              uuuhhh. Chasy poulet tikka masala jiji wiiiii hahaha.</div>
           </div>
           <div class="footer__fans">
             <img class="footer__fans__orgin" src="img/tweet.png">
-            <div class="footer__fans__opinions"><span class="footer__blue">@Minions</span>  - ipsum potatoooo potatoooo uuuhhh. Chasy poulet tikka masala.</div>
+            <div class="footer__fans__opinions"><span class="footer__blue">@Minions</span> - ipsum potatoooo potatoooo
+              uuuhhh. Chasy poulet tikka masala.</div>
           </div>
         </div>
         <div class="footer__item s-hide">
           <h3 class="footer__h3">Newsletter</h3>
           <div class="footer__line footer__line__color"></div>
-          <div class="footer__text">Minions ipsum potatoooo potatoooo uuuhhh. Chasy poulet tikka masala jiji wiiiii hahaha po kass tulaliloo potatoooo. Bee do bee do bee do chasy ti aamoo! Po kass daa b ee do bee do bee do po kass wiiiii butt chasy. Pepete uuuhhh  </div>
+          <div class="footer__text">Minions ipsum potatoooo potatoooo uuuhhh. Chasy poulet tikka masala jiji wiiiii
+            hahaha po kass tulaliloo potatoooo. Bee do bee do bee do chasy ti aamoo! Po kass daa b ee do bee do bee do
+            po kass wiiiii butt chasy. Pepete uuuhhh </div>
           <div class="footer__email">
             <div class="footer__email__input">Enter your Email...</div>
             <div class="footer__email__icon">
               <i class="fa fa-paper-plane fa-2x " aria-hidden="true"></i>
             </div>
             <!-- <i class="fa fa-paper-plane fa-2x " aria-hidden="true"></i> -->
-          </img>
+            </img>
           </div>
-      </div>
+        </div>
       </div>
       <div class="footer_colors_container">
         <div class="footer__colors">
