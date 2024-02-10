@@ -124,7 +124,7 @@ body {
   font-size: 1rem;
 }
 
-.burger__menu {
+.burger__menu::before {
   display: none;
   margin: 1rem;
   color: white;
@@ -717,7 +717,7 @@ body {
     display: none;
   }
 
-  .burger__menu {
+  .burger__menu::before {
     display: block;
   }
 
